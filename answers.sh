@@ -11,3 +11,18 @@ Creating Table:
  1. INSERT INTO graduates (Name, Age, Gender, Points) SELECT Name, Age, Gender, Points FROM students where Name='Layal'
  2. update graduates set Graduation='08/09/2018' where Name='Layal'
  3. delete from students where Name='Layal'
+ 
+ Joins:
+ 
+  1. SELECT employees.Name, employees.Company, companies.Date
+     FROM ( employees
+     INNER JOIN companies ON employees.Company=companies.Name)
+  2. SELECT employees.Name,companies.Date
+     from ( employees
+     INNER JOIN companies on employees.Company=companies.Name)
+     where Date<2000
+  3. SELECT companies.name
+     from ( employees
+     INNER JOIN Companies on employees.Company=companies.Name)
+     where employees.Role='Graphic Designer'
+     
