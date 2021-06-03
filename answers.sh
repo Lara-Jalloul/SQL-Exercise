@@ -26,3 +26,11 @@ Creating Table:
      INNER JOIN Companies on employees.Company=companies.Name)
      where employees.Role='Graphic Designer'
      
+ Count & Filter:
+ 
+  1. SELECT Name ,Points from students where points =(SELECT Max(Points) from students)
+  2. SELECT avg(Points) from students
+  3. SELECT count(Name) from students where Points='500'
+  4. SELECT Name from students where Name like '%s%'
+  5. SELECT * from students ORDER BY Points DESC
+     
